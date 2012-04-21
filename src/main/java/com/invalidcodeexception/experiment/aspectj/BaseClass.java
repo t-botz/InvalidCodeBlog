@@ -1,4 +1,4 @@
-package com.invalidcodeexception.experiment.base;
+package com.invalidcodeexception.experiment.aspectj;
 
 /**
  * User: thibaultdelor

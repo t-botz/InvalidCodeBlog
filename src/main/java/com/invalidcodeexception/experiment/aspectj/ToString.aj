@@ -1,5 +1,8 @@
 package com.invalidcodeexception.experiment.aspectj;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 /**
  * User: thibaultdelor
  * Date: 21/03/12
@@ -9,6 +12,6 @@ public aspect ToString {
     declare parents : com.invalidcodeexception.experiment.aspectj.MyEntity implements ReflectiveToString;
 
     public String ReflectiveToString.toString(){
-        return "Aspect ToString";
+        return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
     }
 }
