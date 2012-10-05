@@ -10,3 +10,7 @@ target
 .idea
 *.iml
 nb-configuration.xml
+
+# gradle
+.gradle
+build
