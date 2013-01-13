@@ -9,10 +9,11 @@ import com.google.caliper.Runner;
 import com.google.caliper.SimpleBenchmark;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Compare the different ways to loop over the collection
+ * Compare the different ways to loop over the listlection
  *
  * @author Tibo
  */
@@ -22,10 +23,10 @@ public class LoopTester extends SimpleBenchmark {
 
         WHILEITER {
             @Override
-            int compute(List<Integer> col) {
+            int compute(List<Integer> list) {
                 int sum = 0;
 
-                final Iterator<Integer> it = col.iterator();
+                final Iterator<Integer> it = list.iterator();
                 while (it.hasNext()) {
                     sum += it.next();
                 }
@@ -34,9 +35,9 @@ public class LoopTester extends SimpleBenchmark {
         },
         FORITER {
             @Override
-            int compute(List<Integer> col) {
+            int compute(List<Integer> list) {
                 int sum = 0;
-                for (Iterator<Integer> it = col.iterator(); it.hasNext();) {
+                for (Iterator<Integer> it = list.iterator(); it.hasNext();) {
                     sum += it.next();
                 }
                 return sum;
@@ -44,9 +45,9 @@ public class LoopTester extends SimpleBenchmark {
         },
         FOREACH {
             @Override
-            int compute(List<Integer> col) {
+            int compute(List<Integer> list) {
                 int sum = 0;
-                for (Integer i : col) {
+                for (Integer i : list) {
                     sum += i;
                 }
                 return sum;
@@ -54,11 +55,11 @@ public class LoopTester extends SimpleBenchmark {
         },
         WHILE {
             @Override
-            int compute(List<Integer> col) {
-                int i = 0;
+            int compute(List<Integer> list) {
                 int sum = 0;
-                while (i < col.size()) {
-                    sum += col.get(i);
+                int i = 0;
+                while (i < list.size()) {
+                    sum += list.get(i);
                     i++;
                 }
                 return sum;
@@ -66,27 +67,30 @@ public class LoopTester extends SimpleBenchmark {
         },
         FOR {
             @Override
-            int compute(List<Integer> col) {
+            int compute(List<Integer> list) {
                 int sum = 0;
-                for (int i = 0; i < col.size(); i++) {
-                    sum += col.get(i);
+                for (int i = 0; i < list.size(); i++) {
+                    sum += list.get(i);
                     
                 }
                 return sum;
             }
         };
 
-        abstract int compute(List<Integer> col);
+        abstract int compute(List<Integer> list);
     }
-    private static final int NB_INTEGERS = 4000;
-    private static final List<Integer> integers = new ArrayList<>(NB_INTEGERS);
+    @Param({"100","1000","10000"}) private int nbIntegers;
     @Param private LoopingStrategy loopingStrategy; 
+    private List<Integer> integers;
 
-    static {
-        for (int i = 0; i < NB_INTEGERS; i++) {
+    @Override
+    protected void setUp() throws Exception {
+        integers = new LinkedList<>();
+        for (int i = 0; i < nbIntegers; i++) {
             integers.add(i);
         }
     }
+    
 
     public void timeLoop(int reps){
         int result = 0;
@@ -100,9 +104,6 @@ public class LoopTester extends SimpleBenchmark {
     
 
     public static void main(String[] args) {
-//        final LoopTester loopTester = new LoopTester();
-//        loopTester.loopingStrategy = LoopingStrategy.WHILE;
-//        loopTester.timeLoop(100);
         Runner.main(LoopTester.class, args);
     }
 }
