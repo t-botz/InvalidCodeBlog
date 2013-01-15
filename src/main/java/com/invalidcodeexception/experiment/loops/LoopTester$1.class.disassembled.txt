@@ -1,0 +1,26 @@
+Classfile /home/tibo/Workspace/InvalidCodeBlog/build/classes/main/com/invalidcodeexception/experiment/loops/LoopTester$1.class
+  Last modified 12/12/2012; size 265 bytes
+  MD5 checksum 703211cba4aeb71f43a9fcd7a7cccd4a
+  Compiled from "LoopTester.java"
+class com.invalidcodeexception.experiment.loops.LoopTester$1
+  SourceFile: "LoopTester.java"
+  EnclosingMethod: #6.#0                  // com.invalidcodeexception.experiment.loops.LoopTester
+  InnerClasses:
+       static #1 of #6; //class com/invalidcodeexception/experiment/loops/LoopTester$1 of class com/invalidcodeexception/experiment/loops/LoopTester
+  minor version: 0
+  major version: 51
+  flags: ACC_SUPER, ACC_SYNTHETIC
+Constant pool:
+   #1 = Class              #7             //  com/invalidcodeexception/experiment/loops/LoopTester$1
+   #2 = Class              #10            //  java/lang/Object
+   #3 = Utf8               SourceFile
+   #4 = Utf8               LoopTester.java
+   #5 = Utf8               EnclosingMethod
+   #6 = Class              #11            //  com/invalidcodeexception/experiment/loops/LoopTester
+   #7 = Utf8               com/invalidcodeexception/experiment/loops/LoopTester$1
+   #8 = Utf8               
+   #9 = Utf8               InnerClasses
+  #10 = Utf8               java/lang/Object
+  #11 = Utf8               com/invalidcodeexception/experiment/loops/LoopTester
+{
+}

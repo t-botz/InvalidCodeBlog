@@ -1,0 +1,143 @@
+Classfile /home/tibo/Workspace/InvalidCodeBlog/build/classes/main/com/invalidcodeexception/experiment/loops/LoopTester$LoopingStrategy$3.class
+  Last modified 12/12/2012; size 1408 bytes
+  MD5 checksum cd09fd737e8ca0b9b9e605d86d1497b4
+  Compiled from "LoopTester.java"
+final class com.invalidcodeexception.experiment.loops.LoopTester$LoopingStrategy$3 extends com.invalidcodeexception.experiment.loops.LoopTester$LoopingStrategy
+  SourceFile: "LoopTester.java"
+  EnclosingMethod: #8.#0                  // com.invalidcodeexception.experiment.loops.LoopTester$LoopingStrategy
+  InnerClasses:
+       public static abstract #15= #8 of #47; //LoopingStrategy=class com/invalidcodeexception/experiment/loops/LoopTester$LoopingStrategy of class com/invalidcodeexception/experiment/loops/LoopTester
+       static #7; //class com/invalidcodeexception/experiment/loops/LoopTester$LoopingStrategy$3
+       static #50 of #47; //class com/invalidcodeexception/experiment/loops/LoopTester$1 of class com/invalidcodeexception/experiment/loops/LoopTester
+  minor version: 0
+  major version: 51
+  flags: ACC_FINAL, ACC_SUPER, ACC_ENUM
+Constant pool:
+   #1 = Methodref          #8.#38         //  com/invalidcodeexception/experiment/loops/LoopTester$LoopingStrategy."<init>":(Ljava/lang/String;ILcom/invalidcodeexception/experiment/loops/LoopTester$1;)V
+   #2 = InterfaceMethodref #39.#40        //  java/util/List.iterator:()Ljava/util/Iterator;
+   #3 = InterfaceMethodref #41.#42        //  java/util/Iterator.hasNext:()Z
+   #4 = InterfaceMethodref #41.#43        //  java/util/Iterator.next:()Ljava/lang/Object;
+   #5 = Class              #44            //  java/lang/Integer
+   #6 = Methodref          #5.#45         //  java/lang/Integer.intValue:()I
+   #7 = Class              #46            //  com/invalidcodeexception/experiment/loops/LoopTester$LoopingStrategy$3
+   #8 = Class              #48            //  com/invalidcodeexception/experiment/loops/LoopTester$LoopingStrategy
+   #9 = Utf8               <init>
+  #10 = Utf8               (Ljava/lang/String;I)V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               LoopingStrategy
+  #16 = Utf8               InnerClasses
+  #17 = Utf8               
+  #18 = Utf8               Lcom/invalidcodeexception/experiment/loops/LoopTester$LoopingStrategy$3;
+  #19 = Utf8               compute
+  #20 = Utf8               (Ljava/util/List;)I
+  #21 = Utf8               i
+  #22 = Utf8               Ljava/lang/Integer;
+  #23 = Utf8               i$
+  #24 = Utf8               Ljava/util/Iterator;
+  #25 = Utf8               col
+  #26 = Utf8               Ljava/util/List;
+  #27 = Utf8               sum
+  #28 = Utf8               I
+  #29 = Utf8               LocalVariableTypeTable
+  #30 = Utf8               Ljava/util/List<Ljava/lang/Integer;>;
+  #31 = Utf8               StackMapTable
+  #32 = Class              #49            //  java/util/Iterator
+  #33 = Utf8               Signature
+  #34 = Utf8               (Ljava/util/List<Ljava/lang/Integer;>;)I
+  #35 = Utf8               SourceFile
+  #36 = Utf8               LoopTester.java
+  #37 = Utf8               EnclosingMethod
+  #38 = NameAndType        #9:#51         //  "<init>":(Ljava/lang/String;ILcom/invalidcodeexception/experiment/loops/LoopTester$1;)V
+  #39 = Class              #52            //  java/util/List
+  #40 = NameAndType        #53:#54        //  iterator:()Ljava/util/Iterator;
+  #41 = Class              #49            //  java/util/Iterator
+  #42 = NameAndType        #55:#56        //  hasNext:()Z
+  #43 = NameAndType        #57:#58        //  next:()Ljava/lang/Object;
+  #44 = Utf8               java/lang/Integer
+  #45 = NameAndType        #59:#60        //  intValue:()I
+  #46 = Utf8               com/invalidcodeexception/experiment/loops/LoopTester$LoopingStrategy$3
+  #47 = Class              #61            //  com/invalidcodeexception/experiment/loops/LoopTester
+  #48 = Utf8               com/invalidcodeexception/experiment/loops/LoopTester$LoopingStrategy
+  #49 = Utf8               java/util/Iterator
+  #50 = Class              #62            //  com/invalidcodeexception/experiment/loops/LoopTester$1
+  #51 = Utf8               (Ljava/lang/String;ILcom/invalidcodeexception/experiment/loops/LoopTester$1;)V
+  #52 = Utf8               java/util/List
+  #53 = Utf8               iterator
+  #54 = Utf8               ()Ljava/util/Iterator;
+  #55 = Utf8               hasNext
+  #56 = Utf8               ()Z
+  #57 = Utf8               next
+  #58 = Utf8               ()Ljava/lang/Object;
+  #59 = Utf8               intValue
+  #60 = Utf8               ()I
+  #61 = Utf8               com/invalidcodeexception/experiment/loops/LoopTester
+  #62 = Utf8               com/invalidcodeexception/experiment/loops/LoopTester$1
+{
+  com.invalidcodeexception.experiment.loops.LoopTester$LoopingStrategy$3(java.lang.String, int);
+    flags: 
+    Code:
+      stack=4, locals=3, args_size=3
+         0: aload_0       
+         1: aload_1       
+         2: iload_2       
+         3: aconst_null   
+         4: invokespecial #1                  // Method com/invalidcodeexception/experiment/loops/LoopTester$LoopingStrategy."<init>":(Ljava/lang/String;ILcom/invalidcodeexception/experiment/loops/LoopTester$1;)V
+         7: return        
+      LineNumberTable:
+        line 46: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       8     0  this   Lcom/invalidcodeexception/experiment/loops/LoopTester$LoopingStrategy$3;
+
+  int compute(java.util.List<java.lang.Integer>);
+    flags: 
+    Code:
+      stack=2, locals=5, args_size=2
+         0: iconst_0      
+         1: istore_2      
+         2: aload_1       
+         3: invokeinterface #2,  1            // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+         8: astore_3      
+         9: aload_3       
+        10: invokeinterface #3,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
+        15: ifeq          40
+        18: aload_3       
+        19: invokeinterface #4,  1            // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        24: checkcast     #5                  // class java/lang/Integer
+        27: astore        4
+        29: iload_2       
+        30: aload         4
+        32: invokevirtual #6                  // Method java/lang/Integer.intValue:()I
+        35: iadd          
+        36: istore_2      
+        37: goto          9
+        40: iload_2       
+        41: ireturn       
+      LineNumberTable:
+        line 49: 0
+        line 50: 2
+        line 51: 29
+        line 52: 37
+        line 53: 40
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+              29       8     4     i   Ljava/lang/Integer;
+               9      31     3    i$   Ljava/util/Iterator;
+               0      42     0  this   Lcom/invalidcodeexception/experiment/loops/LoopTester$LoopingStrategy$3;
+               0      42     1   col   Ljava/util/List;
+               2      40     2   sum   I
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      42     1   col   Ljava/util/List<Ljava/lang/Integer;>;
+      StackMapTable: number_of_entries = 2
+           frame_type = 253 /* append */
+             offset_delta = 9
+        locals = [ int, class java/util/Iterator ]
+           frame_type = 250 /* chop */
+          offset_delta = 30
+
+    Signature: #34                          // (Ljava/util/List<Ljava/lang/Integer;>;)I
+}
