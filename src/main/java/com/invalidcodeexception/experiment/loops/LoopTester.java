@@ -13,7 +13,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Compare the different ways to loop over the listlection
+ * Compare the different ways to loop over the collection
  *
  * @author Tibo
  */
