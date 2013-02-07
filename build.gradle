@@ -11,5 +11,5 @@ repositories{
 dependencies{
     compile "org.apache.commons:commons-lang3:3.1"
     compile 'com.google.caliper:caliper:0.5-rc1'
-
+    compile 'org.apache.commons:commons-compress:1.4.1'
 }
