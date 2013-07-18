@@ -1,21 +1,19 @@
 package com.invalidcodeexception.experiment.volatilekeyword;
 
-import com.invalidcodeexception.logging.MyLoggerFactory;
-
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  * User: thibaultdelor
  * Date: 11/03/12
  */
 public class VolatileTest {
-    private static final Logger LOGGER = MyLoggerFactory.getSimplestLogger();
 
-    private static  int MY_INT = 0;
+    private static volatile int MY_INT = 0;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException
+    {
         new ChangeListener().start();
+        System.out.println("Waiting two seconds so the JIT will probably optimize ChangeListener");
+        Thread.sleep(2000);
+
         new ChangeMaker().start();
     }
 
@@ -25,7 +23,7 @@ public class VolatileTest {
             int local_value = MY_INT;
             while ( local_value < 5){
                 if( local_value!= MY_INT){
-                    LOGGER.log(Level.INFO,"Got Change for MY_INT : {0}", MY_INT);
+                    System.out.println("Got Change for MY_INT : "+ MY_INT);
                      local_value= MY_INT;
                 }
             }
@@ -38,7 +36,7 @@ public class VolatileTest {
 
             int local_value = MY_INT;
             while (MY_INT <5){
-                LOGGER.log(Level.INFO, "Incrementing MY_INT to {0}", local_value+1);
+                System.out.println("Incrementing MY_INT to " + (local_value + 1));
                 MY_INT = ++local_value;
                 try {
                     Thread.sleep(500);
